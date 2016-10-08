@@ -13,6 +13,7 @@
   },
 
   "files": [
+    "typings/index.d.ts",
     "app/app.module.ts",
     "app/main.ts"
   ],

@@ -2,20 +2,16 @@
   "name": "ng-bootstrap-aot",
   "version": "1.0.0",
   "description": "Minimal setup to test ng-bootstrap in the AoT mode",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "typings": "typings",
+    "clean": "rm -rf aot && rm -rf",
+    "build": "ngc -p tsconfig-aot.json",
+    "package": "rollup -c rollup.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pkozlowski-opensource/ng-bootstrap-aot.git"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pkozlowski-opensource/ng-bootstrap-aot/issues"
-  },
-  "homepage": "https://github.com/pkozlowski-opensource/ng-bootstrap-aot#readme",
   "dependencies": {
     "@angular/common": "^2.0.2",
     "@angular/compiler": "^2.0.2",
@@ -24,8 +20,15 @@
     "@angular/forms": "^2.0.2",
     "@angular/platform-browser": "^2.0.2",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.6",
+    "reflect-metadata": "^0.1.8",
     "rxjs": "^5.0.0-beta.12",
     "typescript": "^2.0.3",
     "zone.js": "^0.6.25"
+  },
+  "devDependencies": {
+    "rollup": "^0.36.1",
+    "rollup-plugin-commonjs": "^5.0.4",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "typings": "^1.4.0"
   }
 }
