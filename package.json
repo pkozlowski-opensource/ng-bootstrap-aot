@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Minimal setup to test ng-bootstrap in the AoT mode",
   "scripts": {
+    "ngb": "rm -rf 'node_modules/@ng-bootstrap/ng-bootstrap' && cp -R ../core/dist 'node_modules/@ng-bootstrap/ng-bootstrap'",
     "typings": "typings",
     "clean": "rm -rf aot && rm -rf",
     "build": "ngc -p tsconfig-aot.json",
@@ -13,13 +14,13 @@
     "url": "git+https://github.com/pkozlowski-opensource/ng-bootstrap-aot.git"
   },
   "dependencies": {
-    "@angular/common": "^2.0.2",
-    "@angular/compiler": "^2.0.2",
-    "@angular/compiler-cli": "^0.6.4",
-    "@angular/core": "^2.0.2",
-    "@angular/forms": "^2.0.2",
-    "@angular/platform-browser": "^2.0.2",
-    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.7",
+    "@angular/common": "2.1.1",
+    "@angular/compiler": "2.1.1",
+    "@angular/compiler-cli": "2.1.1",
+    "@angular/core": "2.1.1",
+    "@angular/forms": "2.1.1",
+    "@angular/platform-browser": "2.1.1",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.9",
     "rxjs": "^5.0.0-beta.12",
     "zone.js": "^0.6.25"
   },
